@@ -3,7 +3,7 @@ pipeline {
   environment {
         registry = "diptibagal3010"
         dockerImage = ''
-        Name = "my_image"
+        Name = "host_info"
   }
   agent any
   stages {
@@ -31,7 +31,7 @@ pipeline {
     stage('Docker Run') {
         steps {
           script {
-            dockerImage.run(" -p 5678:5678 --rm --name Host")
+            dockerImage.run(" -p 5678:5678 --rm --name Host_Info")
           }
         }
 
