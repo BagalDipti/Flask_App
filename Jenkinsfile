@@ -31,7 +31,7 @@ pipeline {
     stage('Docker Run') {
         steps {
           script {
-            dockerImage.run(" -p 5678:5678 --rm --name Host_Info")
+            dockerImage.run(" -p 5680:5680 --rm --name Info")
           }
         }
 
