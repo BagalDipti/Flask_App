@@ -9,7 +9,7 @@ pipeline {
   stages {
     stage('Cloning Git') {
       steps {
-        git 'http://gsgit.gslab.com/dipti_bagal/Jenkins.git'
+        git 'https://github.com/BagalDipti/Flask_App.git'
       }
     }
     stage('Building image') {
