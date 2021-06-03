@@ -36,6 +36,15 @@ pipeline {
         }
 
     }
+stage('Docker Run') {
+        steps {
+          script {
+               sh "docker rm Employees --force"
+            dockerImage.run(" -p 7070:7070 --rm --name Employees")
+          }
+        }
+
+    }
 
   }
 }
