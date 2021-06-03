@@ -28,14 +28,7 @@ pipeline {
         }
       }
     }
-    stage('Docker Run') {
-        steps {
-          script {
-            dockerImage.run(" -p 5678:5678 --rm --name Info")
-          }
-        }
-
-    }
+ 
 stage('Docker Run') {
         steps {
           script {
